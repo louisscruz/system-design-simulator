@@ -1,9 +1,13 @@
 import React from 'react';
 
+import SystemNode from './SystemNode';
+
 function SystemCompositionIndex() {
   return (
     <div>
-      INDEX
+      <ul>
+        <SystemNode />
+      </ul>
     </div>
   );
 }
