@@ -25,9 +25,10 @@ describe('entry', () => {
     expect(renderedRoot.type.name).toEqual('Root');
   });
 
-  it('renders the component into the body', () => {
+  it('renders the component into the root div', () => {
     const body = ReactDOM.render.mock.calls[0][1];
+    const root = document.getElementById('root');
 
-    expect(body).toEqual(document.body);
+    expect(body).toEqual(root);
   });
 });
