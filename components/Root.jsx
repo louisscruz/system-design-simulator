@@ -7,8 +7,10 @@ import About from './About';
 function Root() {
   return (
     <HashRouter>
-      <Route path="/" exact component={App} />
-      <Route path="/about" component={About} />
+      <div>
+        <Route path="/" exact component={App} />
+        <Route path="/about" component={About} />
+      </div>
     </HashRouter>
   );
 }
