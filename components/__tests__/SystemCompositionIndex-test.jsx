@@ -2,12 +2,14 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import { SystemCompositionIndex } from '../SystemComposition';
+import { twoVerticalSystem } from '../mocks/systems';
 
 describe('<SystemCompositionIndex />', () => {
   let systemCompositionIndexWrapper;
 
   beforeAll(() => {
-    systemCompositionIndexWrapper = shallow(<SystemCompositionIndex />);
+    const system = twoVerticalSystem;
+    systemCompositionIndexWrapper = shallow(<SystemCompositionIndex system={system} />);
   });
 
   describe('client node', () => {
@@ -18,7 +20,12 @@ describe('<SystemCompositionIndex />', () => {
     });
 
     it('is a defined, single, initial node', () => {
-      expect(clientNode.length > 0).toBeTruthy();
+      expect(clientNode.length).toEqual(1);
+    });
+
+    it('renders the appropriate number of <SystemVertical /> components', () => {
+      const verticals = systemCompositionIndexWrapper.find('SystemVertical');
+      expect(verticals.length).toEqual(2);
     });
   });
 });
