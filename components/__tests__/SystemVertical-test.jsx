@@ -15,7 +15,6 @@ describe('<SystemVertical />', () => {
   });
 
   it('renders a node for each vertical node', () => {
-    // console.log(systemVerticalWrapper.props());
     const nodes = systemVerticalWrapper.find('SystemNode');
     expect(nodes.length).toEqual(vertical.length);
   });
