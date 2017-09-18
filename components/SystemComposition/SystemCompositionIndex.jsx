@@ -1,7 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import shortid from 'shortid';
 
 import ClientNode from './ClientNode';
-import SystemNode from './SystemNode';
+import SystemVertical from './SystemVertical';
 
 class SystemCompositionIndex extends React.Component {
   constructor(props) {
@@ -10,7 +12,10 @@ class SystemCompositionIndex extends React.Component {
   }
 
   verticals() {
-    return (<p>verticals</p>);
+    const { verticals } = this.props.system;
+    return Object.keys(verticals).map(idx => (
+      <SystemVertical key={shortid.generate()} vertical={verticals[idx]} />
+    ));
   }
 
   render() {
@@ -24,5 +29,16 @@ class SystemCompositionIndex extends React.Component {
     );
   }
 }
+
+SystemCompositionIndex.propTypes = {
+  system: PropTypes.object.isRequired,
+};
+
+SystemCompositionIndex.defaultProps = {
+  system: {
+    client: {},
+    verticals: [],
+  },
+};
 
 export default SystemCompositionIndex;

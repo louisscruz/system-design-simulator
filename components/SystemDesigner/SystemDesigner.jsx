@@ -5,11 +5,13 @@ import {
   SystemCompositionIndex,
 } from '../SystemComposition';
 
+import { twoVerticalSystem } from '../mocks/systems';
+
 function SystemDesigner() {
   return (
     <div>
       <SystemCompositionOptions />
-      <SystemCompositionIndex />
+      <SystemCompositionIndex system={twoVerticalSystem} />
     </div>
   );
 }
