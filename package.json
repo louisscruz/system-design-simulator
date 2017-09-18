@@ -2,7 +2,7 @@
   "name": "system-design-simulator",
   "version": "1.0.0",
   "description": "",
-  "main": "system-design-simulator.js",
+  "main": "sysyphus.js",
   "scripts": {
     "test": "jest --watch",
     "start": "webpack-dev-server --inline --hot --content-base dist"
