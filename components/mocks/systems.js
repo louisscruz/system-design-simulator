@@ -1,6 +1,7 @@
 export const simpleSystem = {
   clientNode: {
     count: 1000,
+    averageRequestsPerMinute: 2,
   },
   verticals: {
     0: [
@@ -18,6 +19,7 @@ export const simpleSystem = {
 export const twoVerticalSystem = {
   clientNode: {
     count: 1000,
+    averageRequestsPerMinute: 2,
   },
   verticals: {
     0: [

@@ -19,10 +19,12 @@ class SystemCompositionIndex extends React.Component {
   }
 
   render() {
+    const { system } = this.props;
+    const { clientNode } = system;
     return (
       <div>
         <ul>
-          <ClientNode />
+          <ClientNode client={clientNode} />
           {this.verticals()}
         </ul>
       </div>
@@ -36,7 +38,10 @@ SystemCompositionIndex.propTypes = {
 
 SystemCompositionIndex.defaultProps = {
   system: {
-    client: {},
+    clientNode: {
+      count: 0,
+      averageRequestsPerMinute: 0,
+    },
     verticals: [],
   },
 };
