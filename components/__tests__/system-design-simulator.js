@@ -1,5 +1,4 @@
 describe('entry', () => {
-  // let Entry;
   let ReactDOM;
 
   beforeAll(() => {
@@ -21,9 +20,9 @@ describe('entry', () => {
     expect(calls[0][0]).toEqual('DOMContentLoaded');
   });
 
-  it('renders the App component', () => {
+  it('renders <Root />', () => {
     const renderedRoot = ReactDOM.render.mock.calls[0][0];
-    expect(renderedRoot.type.name).toEqual('App');
+    expect(renderedRoot.type.name).toEqual('Root');
   });
 
   it('renders the component into the body', () => {
