@@ -1,7 +1,7 @@
 {
-  "name": "system-design-simulator",
-  "version": "1.0.0",
-  "description": "",
+  "name": "sysyphus",
+  "version": "0.0.1",
+  "description": "Sysyphus is a system simulator.",
   "main": "sysyphus.js",
   "scripts": {
     "test": "jest --watch",
