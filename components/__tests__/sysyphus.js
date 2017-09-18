@@ -8,7 +8,7 @@ describe('entry', () => {
     ReactDOM = require('react-dom');
     ReactDOM.render = jest.fn();
 
-    require('../../system-design-simulator.jsx');
+    require('../../sysyphus.jsx');
 
     document.addEventListener.mock.calls[0][1]();
   });

@@ -31,7 +31,7 @@ describe('<Root />', () => {
       });
 
       it('has a matching route', () => {
-        expect(rootRoute).toBeDefined();
+        expect(rootRoute.length).toEqual(1);
       });
 
       it('renders <App />', () => {
