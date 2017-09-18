@@ -14,7 +14,7 @@ describe('<SystemCompositionIndex />', () => {
     let clientNode;
 
     beforeAll(() => {
-      clientNode = systemCompositionIndexWrapper.find('SystemNode');
+      clientNode = systemCompositionIndexWrapper.find('ClientNode');
     });
 
     it('is a defined, single, initial node', () => {

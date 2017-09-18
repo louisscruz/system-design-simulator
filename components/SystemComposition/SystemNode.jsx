@@ -1,9 +1,26 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function SystemNode() {
+const defaultChildren = (
+  <div>
+    <p>Add Node</p>
+  </div>
+);
+
+function SystemNode(props) {
   return (
-    <p>Node</p>
+    <li>
+      {props.children}
+    </li>
   );
 }
+
+SystemNode.propTypes = {
+  children: PropTypes.element,
+};
+
+SystemNode.defaultProps = {
+  children: defaultChildren,
+};
 
 export default SystemNode;
