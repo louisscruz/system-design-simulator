@@ -1,9 +1,15 @@
 import React from 'react';
 
+import {
+  SystemCompositionOptions,
+  SystemCompositionIndex,
+} from '../SystemComposition';
+
 function SystemDesigner() {
   return (
     <div>
-      <p>test</p>
+      <SystemCompositionOptions />
+      <SystemCompositionIndex />
     </div>
   );
 }
